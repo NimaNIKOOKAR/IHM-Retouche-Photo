@@ -1,0 +1,1211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>983</width>
+    <height>882</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Magic Pixel</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="ressource.qrc">
+    <normaloff>:/icon/ressource/image/icon/icon.png</normaloff>:/icon/ressource/image/icon/icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="_mainArea">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QSplitter" name="_mainSpliter">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="opaqueResize">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="_fileWidget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <layout class="QVBoxLayout" name="_filesArea">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QTreeView" name="_filesSelector">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="statusTip">
+             <string>Liste de touts les fichiers dans un répertoire.</string>
+            </property>
+            <property name="accessibleName">
+             <string/>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::HLine</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>0</number>
+            </property>
+            <property name="tabKeyNavigation">
+             <bool>true</bool>
+            </property>
+            <property name="dragEnabled">
+             <bool>false</bool>
+            </property>
+            <property name="textElideMode">
+             <enum>Qt::ElideRight</enum>
+            </property>
+            <attribute name="headerDefaultSectionSize">
+             <number>57</number>
+            </attribute>
+            <attribute name="headerHighlightSections">
+             <bool>false</bool>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="_currentFilesLabel">
+            <property name="text">
+             <string>Fichiers Courants :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="_filesSelected">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="statusTip">
+             <string>Liste des images ouvrables.</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::HLine</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="tabKeyNavigation">
+             <bool>true</bool>
+            </property>
+            <property name="dragEnabled">
+             <bool>false</bool>
+            </property>
+            <property name="dragDropOverwriteMode">
+             <bool>true</bool>
+            </property>
+            <property name="dragDropMode">
+             <enum>QAbstractItemView::NoDragDrop</enum>
+            </property>
+            <property name="selectionMode">
+             <enum>QAbstractItemView::ExtendedSelection</enum>
+            </property>
+            <property name="viewMode">
+             <enum>QListView::ListMode</enum>
+            </property>
+            <property name="uniformItemSizes">
+             <bool>false</bool>
+            </property>
+            <property name="selectionRectVisible">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="_selectableArea">
+            <property name="spacing">
+             <number>64</number>
+            </property>
+            <property name="leftMargin">
+             <number>32</number>
+            </property>
+            <property name="rightMargin">
+             <number>32</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="_add_selectable_element">
+              <property name="toolTip">
+               <string/>
+              </property>
+              <property name="statusTip">
+               <string>Ajouter une image à la liste des images.</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="ressource.qrc">
+                <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/list-add.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/list-add.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>Ins</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="_remove_selectable_element">
+              <property name="toolTip">
+               <string/>
+              </property>
+              <property name="statusTip">
+               <string>Retirer une image de la liste des images.</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="ressource.qrc">
+                <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/list-remove.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/list-remove.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>Del</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="_imageWidget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <layout class="QVBoxLayout" name="_imageLayout">
+          <item>
+           <widget class="QTabWidget" name="_imageTabs">
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="tabPosition">
+             <enum>QTabWidget::North</enum>
+            </property>
+            <property name="tabShape">
+             <enum>QTabWidget::Rounded</enum>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <property name="elideMode">
+             <enum>Qt::ElideRight</enum>
+            </property>
+            <property name="documentMode">
+             <bool>false</bool>
+            </property>
+            <property name="tabsClosable">
+             <bool>true</bool>
+            </property>
+            <property name="movable">
+             <bool>true</bool>
+            </property>
+            <property name="tabBarAutoHide">
+             <bool>false</bool>
+            </property>
+            <widget class="QWidget" name="_imageTabs_1">
+             <attribute name="icon">
+              <iconset>
+               <normaloff>:/image/oxygen/icons/16x16/ressource/image/oxygen/icons/16x16/preferences-system.png</normaloff>:/image/oxygen/icons/16x16/ressource/image/oxygen/icons/16x16/preferences-system.png</iconset>
+             </attribute>
+             <attribute name="title">
+              <string>Blank</string>
+             </attribute>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QGraphicsView" name="_imageView">
+                <property name="cursor" stdset="0">
+                 <cursorShape>CrossCursor</cursorShape>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Plain</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="_imageTabs_2">
+             <attribute name="title">
+              <string>Tab 2</string>
+             </attribute>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="_toolWidget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <layout class="QVBoxLayout" name="_toolLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="_globalTool">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="_colorPicker">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="statusTip">
+               <string>Change la couleur courante.</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="ressource.qrc">
+                <normaloff>:/oxygen/64x64/ressource/image/oxygen/icons/64x64/preferences-desktop-color.png</normaloff>:/oxygen/64x64/ressource/image/oxygen/icons/64x64/preferences-desktop-color.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="_rescaleButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="statusTip">
+               <string>Change la taille de l'image courante.</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="ressource.qrc">
+                <normaloff>:/oxygen/64x64/ressource/image/oxygen/icons/64x64/transform-scale.png</normaloff>:/oxygen/64x64/ressource/image/oxygen/icons/64x64/transform-scale.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="_resizeButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="statusTip">
+               <string>Permet de rogner l'image courante.</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="ressource.qrc">
+                <normaloff>:/oxygen/64x64/ressource/image/oxygen/icons/64x64/transform-crop-and-resize.png</normaloff>:/oxygen/64x64/ressource/image/oxygen/icons/64x64/transform-crop-and-resize.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="_toolParameterLayout">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="_selectionToolLabel">
+              <property name="text">
+               <string>Outils de selection :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="_selectionToolbox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="cursor" stdset="0">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="toolTip">
+               <string/>
+              </property>
+              <property name="statusTip">
+               <string>Listes des outils utilisable.</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="tabKeyNavigation">
+               <bool>true</bool>
+              </property>
+              <property name="alternatingRowColors">
+               <bool>true</bool>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>16</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="sortingEnabled">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="_editLabel">
+              <property name="text">
+               <string>Outils d'édition :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="_editToolbox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="tabKeyNavigation">
+               <bool>true</bool>
+              </property>
+              <property name="alternatingRowColors">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="_toolConfigButton">
+              <property name="statusTip">
+               <string>Button de configuration de l'outil courrant.</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="ressource.qrc">
+                <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/applications-system.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/applications-system.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="_multyDrawArea">
+              <property name="leftMargin">
+               <number>16</number>
+              </property>
+              <property name="topMargin">
+               <number>8</number>
+              </property>
+              <property name="rightMargin">
+               <number>16</number>
+              </property>
+              <property name="bottomMargin">
+               <number>8</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="_multyEditingLabel">
+                <property name="text">
+                 <string>Édition Multiple d'images :</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="_emitDrawCheckbox">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="statusTip">
+                 <string>Permet à image courante de modifier toutes les autres images modifiable.</string>
+                </property>
+                <property name="text">
+                 <string>Modifie les autres Images</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="_receiveDrawCheckbox">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="statusTip">
+                 <string>Permet de laisser l'image courante être modifié par les autres images.</string>
+                </property>
+                <property name="text">
+                 <string>Modifiable par les autres Images</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+                <property name="tristate">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QListWidget" name="_samplingDrawList">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="statusTip">
+                 <string>Liste des algorithmes applicable lors de lédition multiple d'images.</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="tabKeyNavigation">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="_menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>983</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="_menuFile">
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="_action_new"/>
+    <addaction name="_action_open"/>
+    <addaction name="_action_openDirectory"/>
+    <addaction name="separator"/>
+    <addaction name="_action_save"/>
+    <addaction name="_action_saveAs"/>
+    <addaction name="_action_saveAll"/>
+    <addaction name="separator"/>
+    <addaction name="_action_close"/>
+    <addaction name="_action_quit"/>
+   </widget>
+   <widget class="QMenu" name="_menuImage">
+    <property name="title">
+     <string>Image</string>
+    </property>
+    <widget class="QMenu" name="_menuTurn">
+     <property name="title">
+      <string>Retourner</string>
+     </property>
+     <property name="icon">
+      <iconset resource="ressource.qrc">
+       <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/align-none.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/align-none.png</iconset>
+     </property>
+     <addaction name="_action_turn_verticaly"/>
+     <addaction name="_action_turn_horizonaly"/>
+    </widget>
+    <widget class="QMenu" name="_menuRotate">
+     <property name="title">
+      <string>Rotation</string>
+     </property>
+     <property name="icon">
+      <iconset resource="ressource.qrc">
+       <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/transform-rotate.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/transform-rotate.png</iconset>
+     </property>
+     <addaction name="_action_rotate_left_90"/>
+     <addaction name="_action_rotate_right_90"/>
+    </widget>
+    <addaction name="_action_trim"/>
+    <addaction name="_action_resize"/>
+    <addaction name="separator"/>
+    <addaction name="_menuTurn"/>
+    <addaction name="_menuRotate"/>
+   </widget>
+   <widget class="QMenu" name="_menuAffichage">
+    <property name="title">
+     <string>Affichage</string>
+    </property>
+    <addaction name="_action_zoom_in"/>
+    <addaction name="_action_zoom_out"/>
+   </widget>
+   <widget class="QMenu" name="_menuSelection">
+    <property name="title">
+     <string>Selection</string>
+    </property>
+    <addaction name="_action_del"/>
+    <addaction name="_action_unselect"/>
+   </widget>
+   <addaction name="_menuFile"/>
+   <addaction name="_menuSelection"/>
+   <addaction name="_menuAffichage"/>
+   <addaction name="_menuImage"/>
+  </widget>
+  <widget class="QStatusBar" name="_statusbar"/>
+  <widget class="QToolBar" name="toolBarLeft">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="_action_new"/>
+   <addaction name="_action_close"/>
+   <addaction name="separator"/>
+   <addaction name="_action_save"/>
+   <addaction name="_action_saveAs"/>
+   <addaction name="_action_saveAll"/>
+   <addaction name="separator"/>
+   <addaction name="_action_zoom_in"/>
+   <addaction name="_action_zoom_out"/>
+   <addaction name="separator"/>
+   <addaction name="_action_rotate_left_90"/>
+   <addaction name="_action_rotate_right_90"/>
+   <addaction name="_action_turn_verticaly"/>
+   <addaction name="_action_turn_horizonaly"/>
+   <addaction name="separator"/>
+   <addaction name="_action_unselect"/>
+  </widget>
+  <action name="_action_new">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/document-new.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/document-new.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nouveau...</string>
+   </property>
+   <property name="statusTip">
+    <string>Crée une nouvelle image.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="_action_open">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/document-open.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/document-open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ouvrir...</string>
+   </property>
+   <property name="statusTip">
+    <string>Ouvre une image.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer">
+   <property name="text">
+    <string>Enregistrer</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer_sous">
+   <property name="text">
+    <string>Enregistrer sous...</string>
+   </property>
+  </action>
+  <action name="_action_save">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/document-save.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/document-save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Enregistrer</string>
+   </property>
+   <property name="statusTip">
+    <string>Sauvegarder l'image courrante.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="_action_saveAs">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/document-save-all.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/document-save-all.png</iconset>
+   </property>
+   <property name="text">
+    <string>Enregistrer sous...</string>
+   </property>
+   <property name="statusTip">
+    <string>Sauvergader sous l'image courrante.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="_action_saveAll">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/document-save-as.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/document-save-as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Enregistrer tout</string>
+   </property>
+   <property name="statusTip">
+    <string>Sauvegarder toutes les images.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+S</string>
+   </property>
+  </action>
+  <action name="_action_close">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/document-close.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/document-close.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fermer</string>
+   </property>
+   <property name="statusTip">
+    <string>Ferme l'image courrante.</string>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="_action_quit">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/dialog-close.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/dialog-close.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+   <property name="statusTip">
+    <string>Quitter l'application.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+Q</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::QuitRole</enum>
+   </property>
+  </action>
+  <action name="_action_undo">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/edit-undo.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/edit-undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Annuler</string>
+   </property>
+   <property name="statusTip">
+    <string>Annule le dernier changement.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="_action_redo">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/edit-redo.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/edit-redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Répéter</string>
+   </property>
+   <property name="statusTip">
+    <string>Annule la dernière annulation de changement.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="_action_cut">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/edit-cut.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/edit-cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Couper</string>
+   </property>
+   <property name="statusTip">
+    <string>Coupe la selection courante.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="_action_copy">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/edit-copy.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/edit-copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copier</string>
+   </property>
+   <property name="statusTip">
+    <string>Copie la selection courante</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="_action_paste">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/edit-paste.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/edit-paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>Coller</string>
+   </property>
+   <property name="statusTip">
+    <string>Colle ce qui à été copier ou couper.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="_action_delete">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/image/oxygen/icons/16x16/ressource/image/oxygen/icons/16x16/edit-delete.png</normaloff>:/image/oxygen/icons/16x16/ressource/image/oxygen/icons/16x16/edit-delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Supprimer</string>
+   </property>
+   <property name="statusTip">
+    <string>Suprime la section actuelle.</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="_action_zoom_in">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/image-zoom-in.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/image-zoom-in.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom avant</string>
+   </property>
+   <property name="statusTip">
+    <string>Zoom en avant.</string>
+   </property>
+   <property name="shortcut">
+    <string>PgUp</string>
+   </property>
+  </action>
+  <action name="_action_zoom_out">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/image-zoom-out.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/image-zoom-out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom arrière</string>
+   </property>
+   <property name="statusTip">
+    <string>Zoom en arrière</string>
+   </property>
+   <property name="shortcut">
+    <string>PgDown</string>
+   </property>
+  </action>
+  <action name="_action_del">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/edit-clear-locationbar-rtl.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/edit-clear-locationbar-rtl.png</iconset>
+   </property>
+   <property name="text">
+    <string>Supprimer</string>
+   </property>
+   <property name="statusTip">
+    <string>Supprime la selection courante.</string>
+   </property>
+   <property name="shortcut">
+    <string>Backspace</string>
+   </property>
+  </action>
+  <action name="_action_credit">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/system-help.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/system-help.png</iconset>
+   </property>
+   <property name="text">
+    <string>Aide</string>
+   </property>
+   <property name="statusTip">
+    <string>Affiche l'aide.</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="_action_propos">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/documentinfo.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/documentinfo.png</iconset>
+   </property>
+   <property name="text">
+    <string>À propos</string>
+   </property>
+  </action>
+  <action name="_action_trim">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/transform-crop-and-resize.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/transform-crop-and-resize.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rogner</string>
+   </property>
+   <property name="statusTip">
+    <string>Supprime les partie de l'image qui ne sont pas dans la selection courrante</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+X</string>
+   </property>
+  </action>
+  <action name="_action_resize">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/transform-scale.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/transform-scale.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redimensionner...</string>
+   </property>
+   <property name="statusTip">
+    <string>Redimensionne l'image.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+R</string>
+   </property>
+  </action>
+  <action name="_action_rezise_draw_area">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/transform-crop.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/transform-crop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Changer la taille de la zone de dessin...</string>
+   </property>
+   <property name="statusTip">
+    <string>Change la taille de la zone de dessin.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+R</string>
+   </property>
+  </action>
+  <action name="_action_turn_verticaly">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/align-horizontal-center.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/align-horizontal-center.png</iconset>
+   </property>
+   <property name="text">
+    <string>Verticalement</string>
+   </property>
+   <property name="statusTip">
+    <string>Tourne verticalement l'image.</string>
+   </property>
+  </action>
+  <action name="_action_turn_horizonaly">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/align-vertical-center.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/align-vertical-center.png</iconset>
+   </property>
+   <property name="text">
+    <string>Horizontalement</string>
+   </property>
+   <property name="statusTip">
+    <string>Tourne horizontalement l'image.</string>
+   </property>
+  </action>
+  <action name="_action_rotate_left_90">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/object-rotate-left.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/object-rotate-left.png</iconset>
+   </property>
+   <property name="text">
+    <string>Faire pivoter vers la gauche de 90°</string>
+   </property>
+   <property name="statusTip">
+    <string>Effectue une rotation, vers la gauche, de l'image à 90 degrées.</string>
+   </property>
+  </action>
+  <action name="_action_rotate_right_90">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/object-rotate-right.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/object-rotate-right.png</iconset>
+   </property>
+   <property name="text">
+    <string>Faire pivoter vers la droite de 90°</string>
+   </property>
+   <property name="statusTip">
+    <string>Effectue une rotation, vers la droite, de l'image à 90 degrées.</string>
+   </property>
+  </action>
+  <action name="_action_rotate_180">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/transform-rotate.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/transform-rotate.png</iconset>
+   </property>
+   <property name="text">
+    <string>Faire Pivoter de 180°</string>
+   </property>
+   <property name="statusTip">
+    <string>Effectue une rotation de l'image à 180 degrées.</string>
+   </property>
+  </action>
+  <action name="_action_openDirectory">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/document-open-folder.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/document-open-folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ouvrir répertoire...</string>
+   </property>
+   <property name="statusTip">
+    <string>Ouvre une répertoire.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+O</string>
+   </property>
+  </action>
+  <action name="_action_unselect">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/draw-unselect.png</normaloff>:/oxygen/16x16/ressource/image/oxygen/icons/16x16/draw-unselect.png</iconset>
+   </property>
+   <property name="text">
+    <string>Déselectionner</string>
+   </property>
+   <property name="statusTip">
+    <string>Déselectionne la selection courrante</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>_filesSelector</tabstop>
+  <tabstop>_filesSelected</tabstop>
+  <tabstop>_add_selectable_element</tabstop>
+  <tabstop>_remove_selectable_element</tabstop>
+  <tabstop>_colorPicker</tabstop>
+  <tabstop>_rescaleButton</tabstop>
+  <tabstop>_resizeButton</tabstop>
+  <tabstop>_selectionToolbox</tabstop>
+  <tabstop>_toolConfigButton</tabstop>
+  <tabstop>_emitDrawCheckbox</tabstop>
+  <tabstop>_receiveDrawCheckbox</tabstop>
+  <tabstop>_samplingDrawList</tabstop>
+  <tabstop>_imageTabs</tabstop>
+  <tabstop>_imageView</tabstop>
+ </tabstops>
+ <resources>
+  <include location="ressource.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>_receiveDrawCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>_samplingDrawList</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>968</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>968</x>
+     <y>665</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
